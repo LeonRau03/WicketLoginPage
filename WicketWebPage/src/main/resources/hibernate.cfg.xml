@@ -4,11 +4,11 @@
 		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
 	<session-factory>
-        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/java?serverTimezone=UTC</property>
-        <property name="hibernate.connection.username">root</property>
-        <property name="hibernate.connection.password">root</property>
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://ec2-54-228-139-34.eu-west-1.compute.amazonaws.com:5432/d541b1qme0r45c</property> <!-- jdbc:mysql://localhost:5432/java?serverTimezone=UTC -->
+        <property name="hibernate.connection.username">owhdockqnlbtjg</property> 	<!-- root -->
+        <property name="hibernate.connection.password">8056054c7418af6ae5b17fc73f9bf59abcef70b384c3d881c36f3251dca53197</property>	<!-- root -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>	<!-- org.hibernate.dialect.MySQLDialect -->
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
         <property name="hbm2ddl.auto">update</property>
