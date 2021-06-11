@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+	<head>	
+		<meta charset="utf-8" />
+		<title>Your Information</title>
+		<link rel="icon" href="http://localhost:8080/logo.png" type="image/png" />
+		<link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet' type='text/css'/>
+		<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Stylesheet"/>
+		<link rel="stylesheet" href="Design.css" type="text/css"/>		
+	</head>
+
+	<body>
+		<div id="hd">
+			<div id="logo">
+				<img src="logo.png" width="50px" height="50px" alt="Wicket Logo" />
+				<h1>Almost there</h1>
+			</div>
+		</div>
+		<div id="bd">
+		<h1>Your Information:</h1>
+		<p class="pResult">Name: <Label wicket:id="enteredName"></Label></p>
+		<p class="pResult">Age: <Label wicket:id="enteredAge"></Label></p>
+		<p class="pResult">City: <Label wicket:id="enteredZipCode"></Label>
+				 <Label wicket:id="enteredCity"></Label></p>
+		<p class="pResult">Street and House Number: <Label wicket:id="enteredStreet"></Label>
+									<Label wicket:id="enteredHouseNumber"></Label></p>
+
+		<br>
+		<h3>Is your Information correct? <br> Do you want to proceed?</h3>
+		<br>
+		<button wicket:id="BackButton" class="Back">Back</button>
+		<button wicket:id="ProceedButton" class="Proceed">Proceed</button>
+		</div>
+		<div id="ft">
+		</div>
+	</body>
+</html>

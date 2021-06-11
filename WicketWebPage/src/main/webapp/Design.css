@@ -1,0 +1,125 @@
+@charset "ISO-8859-1";
+
+p {
+	font: 18px tahoma;
+}
+
+.pResult {
+	font: 22px tahoma;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.20);	
+}
+
+h1 {
+	font-size: 40px;
+	text-shadow: 2px 2px 4px rgba(0,0,0,0.20);
+}
+
+h3 {
+	text-shadow: 2px 2px 3px rgba(0,0,0,0.20);
+}
+
+.submit1 {
+	margin-top: 5px;
+	font: 14px tahoma;
+	background: white;
+	padding: none;
+	border: 2px solid #6493D2;
+	outline: none;
+	border-radius: 3px;
+	min-height: 30px;
+	min-width: 120px;
+	transition-duration: 0.3s;
+	cursor: pointer;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.20);
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.17), 0 2px 6px 0 rgba(0, 0, 0, 0.19);	
+}
+
+	.submit1:hover {
+		background: #6493D2;
+		color: white;
+	}
+	
+	.submit1:active {
+		background: #092E67;
+		border-color: #092E67;
+		color: white;
+	}
+
+.Back {
+	font: 14px tahoma;
+	color: white;
+	background: linear-gradient(to left, royalblue, deepskyblue);
+	padding: none;
+	border: none;
+	border-radius: 3px 4px;
+	outline-color: rgba(0,0,0,0.24);
+	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+	min-height: 30px;
+	min-width: 120px;
+	transition-duration: 0.4s;
+	text-shadow: 2px 2px 3px rgba(0,0,0,0.20);	
+	cursor: pointer;
+}
+
+	.Back:hover {
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3), 0 3px 8px 0 rgba(0, 0, 0, 0.24);
+		transform: translateY(-5px);
+	}
+
+.Proceed {
+	font: 14px tahoma;
+	color: white;
+	background: linear-gradient(to right, limegreen, darkgreen);
+	padding: none;
+	border: none;
+	border-radius: 3px 4px;
+	outline-color: rgba(0,0,0,0.24);
+	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+	min-height: 30px;
+	min-width: 120px;
+	transition-duration: 0.4s;
+	text-shadow: 2px 2px 3px rgba(0,0,0,0.20);	
+	cursor: pointer;
+}
+
+	.Proceed:hover {
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3), 0 3px 8px 0 rgba(0, 0, 0, 0.24);
+		transform: translateY(-5px);
+	}
+	
+#reset {
+    box-shadow: 0px 0px 5px #7b7b7b;
+    position: absolute;
+    border-radius: 7px;
+    text-align: center;
+    display: block;
+    align-content: center;
+    align-items: center;
+    padding: 9px;
+}
+
+.resetButton {
+	padding: 5px;
+	font: 18px tahoma;
+	color: red;
+	border: 2px solid red;
+	border-radius: 30px;
+	transition-duration: 0.3s;
+	background-color: white;
+    box-shadow: 0px 2px 4px 1px #adadad;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.20);
+	min-height: 35px;
+    min-width: 100px;
+}
+
+.resetButton:hover {
+	color: white;
+	background-color: red;
+	cursor: pointer;
+}
+
+.resetButton:active {
+	padding: 4px;
+	border: 2px solid red;
+	font: 20px tahoma;
+}
