@@ -12,7 +12,7 @@ import org.apache.wicket.protocol.http.WebApplication;
  * @see gmbh.gil.Start#main(String[])
  */
 public class WicketApplication extends WebApplication
-{
+{	
 	/**
 	 * @see org.apache.wicket.Application#getHomePage()
 	 */
