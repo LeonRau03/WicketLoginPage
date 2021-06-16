@@ -22,7 +22,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>gmbh.gil</groupId>
 	<artifactId>WicketWebPage</artifactId>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<version>1.0-SNAPSHOT</version>
 		<!-- TODO project name  -->
 	<name>quickstart</name>
@@ -83,14 +83,23 @@
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-webapp</artifactId>
-			<scope>test</scope>
 			<version>${jetty9.version}</version>
+			<!--  needs to be compile time as we bring our own embedded Jetty -->
+			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-jmx</artifactId>
 			<version>${jetty9.version}</version>
-			<scope>test</scope>
+			<!--  needs to be compile time as we bring our own embedded Jetty -->
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<!--  needs to be compile time as we bring our own embedded Jetty -->
+			<scope>compile</scope>
 		</dependency>
 		
 		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
@@ -206,6 +215,32 @@
 					<wtpversion>${wtp.version}</wtpversion>
 				</configuration>
 			</plugin>
+			
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>appassembler-maven-plugin</artifactId>
+				<version>1.1.1</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>assemble</goal>
+						</goals>
+						<configuration>
+							<assembleDirectory>target</assembleDirectory>
+							<generateRepository>false</generateRepository>
+							<extraJvmArguments>-Xmx512m</extraJvmArguments>
+							<programs>
+								<program>
+									<mainClass>Start</mainClass>
+									<name>webapp</name>
+								</program>
+							</programs>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			
 		</plugins>
 	</build>
 
